@@ -2,7 +2,7 @@
 #define __POLYNOMIAL_H__
 
 #include <iostream>
-#define MAX_DEGREE	80 // 배열 크기 80으로 설정
+#define MAX_DEGREE	200 // 배열 크기 설정
 
 using namespace std;
 
