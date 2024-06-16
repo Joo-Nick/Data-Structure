@@ -1,6 +1,6 @@
 #include "ArrayQ.h"
 
-ArrayQ::ArrayQ() : queue{} { //선언과 동시에 초기화
+ArrayQ::ArrayQ() : queue() { //선언과 동시에 초기화
     front = rear = -1;
 }
 
@@ -20,9 +20,7 @@ void ArrayQ::enqueue(int e){
     if(isFull()){
         cout << "Q is Full" << endl;
     }
-    else{
         queue[++rear] = e;
-    }
 }
 
 char ArrayQ::dequeue(){
@@ -30,9 +28,7 @@ char ArrayQ::dequeue(){
         cout << "Q is Empty" << endl;
         return -1;
     }
-    else{
         return queue[++front];
-    }
 }
 
 char ArrayQ::peek(){
@@ -40,9 +36,7 @@ char ArrayQ::peek(){
         cout << "Q is Empty" << endl;
         return -1;
     }
-    else{
         return queue[front + 1];
-    }
 }
 
 void ArrayQ::display(){
