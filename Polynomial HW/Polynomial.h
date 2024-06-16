@@ -17,6 +17,7 @@ public:
 	
 	void read();
     void sub(Polynomial a, Polynomial b);
+	void add(Polynomial a, Polynomial b);
     void mult(Polynomial a, Polynomial b);
     void trim();
 	void display();

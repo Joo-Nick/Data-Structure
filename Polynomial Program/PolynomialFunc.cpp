@@ -17,9 +17,12 @@ void Polynomial::read() { //다항식 계수 받기
 }
 
 void Polynomial::add(Polynomial a, Polynomial b) { //차수 비교
-	int i;
+	*this = a;
+	if(a.degree < b.degree) degree = b.degree;
+	for(int i = 0; i <= b.degree; i++)
+		coef[i] += b.coef[i];
 	
-	if (a.degree > b.degree) {
+	/*if (a.degree > b.degree) {
 		*this = a; //C를 가르킴
 		for (i = 0; i <= b.degree; i++)
 			coef[i] += b.coef[i];
@@ -28,7 +31,7 @@ void Polynomial::add(Polynomial a, Polynomial b) { //차수 비교
 		*this = b;
 		for (i = 0; i <= a.degree; i++)
 			coef[i] += a.coef[i];
-	}
+	}*/
 }
 
 

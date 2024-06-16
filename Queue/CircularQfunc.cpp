@@ -20,9 +20,9 @@ void ArrayQ::enqueue(int e){
     if(isFull()){
         cout << "Q is Full" << endl;
     }
-    else{
+            //rear = (rear + 1) % MAX;
+            //queue[rear] = e;
             queue[++rear % MAX_QUEUE_SIZE] = e;
-    }
 }
 
 char ArrayQ::dequeue(){
@@ -30,9 +30,7 @@ char ArrayQ::dequeue(){
         cout << "Q is Empty" << endl;
         return -1;
     }
-    else{
         return queue[++front % MAX_QUEUE_SIZE];
-    }
 }
 
 char ArrayQ::peek(){
@@ -40,9 +38,7 @@ char ArrayQ::peek(){
         cout << "empty" << endl;
         return -1;
     }
-    else{
         return queue[(front + 1) % MAX_QUEUE_SIZE];
-    }
 }
 
 void ArrayQ::display(){
